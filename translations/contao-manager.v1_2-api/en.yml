@@ -1,0 +1,147 @@
+en:
+    integrity:
+        allow_url_fopen:
+            title: 'The PHP setting "allow_url_fopen" is not enabled on the server.'
+        process:
+            title: 'The PHP function "proc_open" and/or "proc_close" is not available on the server.'
+            detail: 'The "proc_open" and "proc_close" functions are necessary to run command line tasks in the background. Check with your hosting provider why this method is not available; neither the Contao Manager nor Contao 4 will run correctly without it.'
+        intl:
+            title: 'The PHP Intl extension is not available.'
+            detail: 'Contao 4 requires the PHP Intl extension for internationalization purposes.'
+        openssl:
+            title: 'The PHP OpenSSL extension is not available.'
+            detail: 'The Contao Manager requires the OpenSSL extension to download files over an encrypted connection (https).'
+        dom:
+            title: 'The PHP DOM extension is not available.'
+            detail: 'Contao 4 requires the PHP DOM extension to parse XML documents.'
+        xmlreader:
+            title: 'The PHP XMLReader extension is not available.'
+            detail: 'Contao 4 requires the PHP DOM extension to parse XML documents.'
+        graphics_lib:
+            title: 'No PHP image processing library is available.'
+            detail: 'Contao 4 requires either the GD, Imagick or Gmagick extension to process images.'
+        symlink:
+            title: 'The PHP symlink method is unavailable or does not work correctly.'
+        session:
+            title: 'The PHP session could not be started.'
+        web_root:
+            title: 'The Phar file must be located in the /web folder.'
+        memory_limit:
+            title: 'Insufficient PHP memory limit'
+            detail: 'Your PHP configuration only allows for {limit} memory (on the command line). This is not enough to run Composer and it was not possible to automatically increase this limit. Please contact your hosting provider for support.'
+        systempdir:
+            title: 'Unable to write to the temporary system directory.'
+            detail: 'This is most likely a problem with your hosting configuration. Make sure that either open_basedir does allow access to the temporary directory or that the sys_temp_dir is correctly configured.'
+        contao_unknown:
+            title: 'Unknown installation status'
+            detail: "Some files were found on your server but no known Contao version could be detected.\nYou must either manually repair your application or remove the following files and folders to install Contao:\n\n{files}"
+        contao_version:
+            title: 'The Contao version could not be determined'
+            detail: "The console returned unexpected content when asked for the Contao version. Please check the output for more information:\n\n{output}"
+
+    boot:
+        composer:
+            invalid: 'composer.json schema validation: {exception}'
+
+    config:
+        php_cli:
+            not_found: 'This path does not contain a valid PHP binary.'
+            incompatible: 'This binary is a PHP version {cli} but your web server is version {web}.'
+        cloud:
+            platform: 'Platform must not be configured in composer.json.'
+            cache: 'Cache properties must not be configured in composer.json.'
+
+    taskstatus:
+        created: 'Console Task has been created …'
+        complete:
+            summary: 'Console task complete!'
+            detail: 'The background task was completed successfully. Check the console protocol for the details.'
+            console: '### Task completed successfully ###'
+        aborting:
+            summary: 'Stopping current operation …'
+            detail: 'The background task is being cancelled.'
+            console: '### The background task is being cancelled ###'
+        stopped:
+            summary: 'Console task terminated!'
+            detail: 'The background task was cancelled. Please check the console protocol.'
+            console: '### The background task was cancelled ###'
+        error:
+            summary: 'Console task terminated!'
+            detail: 'The background task has stopped unexpectedly. Please check the console protocol.'
+            console: '### The background task has stopped unexpectedly ###'
+
+    task:
+        setup_packages:
+            title: 'Installing Contao Application'
+            completeSummary: 'Installation complete!'
+            completeDetail: 'To complete the setup process, please open the install tool and enter your database credentials.'
+        install_packages:
+            title: 'Installing Composer Dependencies'
+        update_packages:
+            title: 'Updating Packages'
+            completeSummary: 'Contao packages updated!'
+            completeDetail: 'Please open the install tool to apply any necessary database changes.'
+        dump_autoload:
+            title: 'Dumping Composer Autoloader'
+        clear_cache:
+            title: 'Clearing Composer Cache'
+        rebuild_cache:
+            title: 'Rebuilding Contao Cache'
+        install_tool:
+            title: 'Contao Install Tool'
+        self_update:
+            title: 'Updating Contao Manager'
+            completeSummary: 'Contao Manager was successfully updated'
+            completeDetail: 'Updated to version {current}'
+
+    taskoperation:
+        self-update:
+            summary: 'Installing latest Contao Manager …'
+            detail: 'Updating from {old} to {new}'
+        remove-cache:
+            summary: 'Deleting cache directory …'
+        remove-vendor:
+            summary: 'Deleting vendor directory …'
+        cache-warmup:
+            summary: 'Warming application cache …'
+        cache-clear:
+            summary: 'Clearing application cache …'
+        composer-update:
+            summary: 'Updating Composer dependencies …'
+        composer-require:
+            summary: 'Adding Composer packages …'
+        composer-remove:
+            summary: 'Removing Composer packages …'
+        install-uploads:
+            summary: 'Installing uploaded packages …'
+            console: 'Installed artifact for {package} (version {version}) [to packages/{name}]'
+        remove-uploads:
+            summary: 'Removing upload files …'
+        composer-install:
+            summary: 'Installing Composer dependencies …'
+            summaryRetry: 'Installing Composer dependencies (retrying {current}/{max}) …'
+        dump-autoload:
+            summary: 'Dumping class autoloader …'
+        install-lock:
+            summary: 'Locking Contao Install Tool …'
+        install-unlock:
+            summary: 'Unlocking Contao Install Tool …'
+        create-project:
+            summary: 'Installing application template …'
+        cloud:
+            queuedSummary: 'Job queued in Composer Cloud for {seconds} seconds'
+            queuedDetail: 'Starting in approx. {seconds} seconds (currently {jobs} jobs on {workers} workers)'
+            processingSummary: 'Resolving dependencies using Composer Cloud'
+            processingDetail: 'Job ID {job} is running for {seconds} seconds'
+            errorSummary: 'Failed resolving dependencies …'
+            finishedSummary: 'Composer Cloud job completed in {seconds} seconds'
+            finishedDetail: 'Memory usage: {memory} (peak: {peak}), time: {time}.'
+        clear-cache:
+            summary: 'Deleting cache files …'
+
+    upload:
+        error:
+            file: 'The file is invalid or does not contain a composer.json.'
+            json: 'The composer.json does not contain valid JSON data.'
+            schema: 'The composer.json schema validation failed.'
+            partial: 'The file upload was not completed.'
