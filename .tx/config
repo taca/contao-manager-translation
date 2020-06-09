@@ -26,3 +26,18 @@ file_filter = translations/contao-manager.v1_2-ui/<lang>.json
 source_lang = en
 type = KEYVALUEJSON
 
+[contao-manager.v1_3-api]
+file_filter = translations/contao-manager.v1_3-api/<lang>.yml
+source_lang = en
+type = YML
+
+[contao-manager.v1_3-list]
+file_filter = translations/contao-manager.v1_3-list/<lang>.json
+source_lang = en
+type = KEYVALUEJSON
+
+[contao-manager.v1_3-ui]
+file_filter = translations/contao-manager.v1_3-ui/<lang>.json
+source_lang = en
+type = KEYVALUEJSON
+
