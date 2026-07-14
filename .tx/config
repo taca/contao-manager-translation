@@ -1,43 +1,59 @@
 [main]
 host = https://www.transifex.com
 
-[contao-manager.v1_1-api]
-file_filter = translations/contao-manager.v1_1-api/<lang>.yml
-source_lang = en
-type = YML
+[o:contao:p:contao-manager:r:v1_1-api]
+file_filter            = translations/contao-manager.v1_1-api/<lang>.yml
+source_file            = translations/contao-manager.v1_1-api/en.yml
+source_lang            = en
+type                   = YML
+replace_edited_strings = false
+keep_translations      = false
 
-[contao-manager.v1_1-ui]
-file_filter = translations/contao-manager.v1_1-ui/<lang>.json
-source_lang = en
-type = KEYVALUEJSON
+[o:contao:p:contao-manager:r:v1_1-ui]
+file_filter            = translations/contao-manager.v1_1-ui/<lang>.json
+source_file            = translations/contao-manager.v1_1-ui/en.json
+source_lang            = en
+type                   = KEYVALUEJSON
+replace_edited_strings = false
+keep_translations      = false
 
-[contao-manager.v1_2-api]
-file_filter = translations/contao-manager.v1_2-api/<lang>.yml
-source_lang = en
-type = YML
+[o:contao:p:contao-manager:r:v1_3-list]
+file_filter            = translations/contao-manager.v1_3-list/<lang>.json
+source_file            = translations/contao-manager.v1_3-list/en.json
+source_lang            = en
+type                   = KEYVALUEJSON
+replace_edited_strings = false
+keep_translations      = false
 
-[contao-manager.v1_2-list]
-file_filter = translations/contao-manager.v1_2-list/<lang>.json
-source_lang = en
-type = KEYVALUEJSON
+[o:contao:p:contao-manager:r:v1_8-api]
+file_filter            = translations/contao-manager.v1_8-api/<lang>.yml
+source_file            = translations/contao-manager.v1_8-api/en.yml
+source_lang            = en
+type                   = YML
+replace_edited_strings = false
+keep_translations      = false
 
-[contao-manager.v1_2-ui]
-file_filter = translations/contao-manager.v1_2-ui/<lang>.json
-source_lang = en
-type = KEYVALUEJSON
+[o:contao:p:contao-manager:r:v1_8-ui]
+file_filter            = translations/contao-manager.v1_8-ui/<lang>.json
+source_file            = translations/contao-manager.v1_8-ui/en.json
+source_lang            = en
+type                   = KEYVALUEJSON
+replace_edited_strings = false
+keep_translations      = false
 
-[contao-manager.v1_3-api]
-file_filter = translations/contao-manager.v1_3-api/<lang>.yml
-source_lang = en
-type = YML
+[o:contao:p:contao-manager:r:v1_9-api]
+file_filter            = translations/contao-manager.v1_9-api/<lang>.yml
+source_file            = translations/contao-manager.v1_9-api/en.yml
+source_lang            = en
+type                   = YML
+replace_edited_strings = false
+keep_translations      = false
 
-[contao-manager.v1_3-list]
-file_filter = translations/contao-manager.v1_3-list/<lang>.json
-source_lang = en
-type = KEYVALUEJSON
-
-[contao-manager.v1_3-ui]
-file_filter = translations/contao-manager.v1_3-ui/<lang>.json
-source_lang = en
-type = KEYVALUEJSON
+[o:contao:p:contao-manager:r:v1_9-ui]
+file_filter            = translations/contao-manager.v1_9-ui/<lang>.json
+source_file            = translations/contao-manager.v1_9-ui/en.json
+source_lang            = en
+type                   = KEYVALUEJSON
+replace_edited_strings = false
+keep_translations      = false
 
