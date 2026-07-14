@@ -1,0 +1,102 @@
+ja:
+    integrity:
+        allow_url_fopen:
+            title: 'サーバーのPHPの設定で"allow_url_fopen"が有効ではありません。'
+        process:
+            title: 'PHPの"proc_"関数が有効ではありません。'
+            detail: 'バックグラウンドでコマンド行のタスクを実行するために"proc_open"、"proc_close"、"proc_get_status"、"proc_terminate"といった関数が必要です。これらのメソッドが何故利用できないかをホスティングサービスの提供者に確認してください、これらなしではContao Managerは正しく動作しません。'
+        intl:
+            title: 'PHPのIntl拡張を利用できません。'
+            detail: 'Contao 4は国際化の目的のためにPHPのIntl拡張を必要とします。'
+        openssl:
+            title: 'PHPのOpenSSL拡張を利用できません。'
+            detail: 'Contao Managerは暗号化した接続(https)でファイルをダウンロードするためにOpenSSL拡張が必要です。'
+        dom:
+            title: 'PHPのDOM拡張を利用できません。'
+            detail: 'Contao 4はXMLドキュメントの解析のためにPHPのDOM拡張を必要とします。'
+        xmlreader:
+            title: 'PHPのXMLReader拡張を利用できません。'
+            detail: 'Contao 4はXMLドキュメントの解析のためにPHPのXMLReader拡張を必要とします。'
+        graphics_lib:
+            title: 'PHPの画像処理のライブラリが何も利用できません。'
+            detail: 'Contao 4は画像を処理するためにGD、IMagick、Gmagickの拡張のいずれかを必要とします。'
+        symlink:
+            title: 'PHPのsymlinkメソッドを利用できないか、正しく動作しません。'
+        session:
+            title: 'PHPのセッションを開始できませんでした。'
+        memory_limit:
+            title: 'PHPのメモリの制限が不足しています。'
+            detail: 'PHPの設定は(コマンド行では){limit}のメモリだけを許可しています。こではComposerを動作させるのに十分ではなく、制限を自動的に増やすこともできませんでした。ホスティングの提供者に連絡してサポートを求めてください。'
+        systempdir:
+            title: 'システムの一時ディレクトリに書き込みできませんでした。'
+            detail: 'ホスティングの設定に問題の可能性がもっとも高いです。open_basedirが一時ディクトリへのアクセスを許可しているか、sys_temp_dirが正しく設定されているか確認してください。'
+        zip:
+            title: 'zip拡張とunzip/7zコマンドの両方がありません。'
+
+    boot:
+        composer:
+            invalid: 'composer.jsonスキームの検証: {exception}'
+
+    config:
+        php_cli:
+            not_found: 'このパスに有効なPHPの実行ファイルがありません。'
+            incompatible: 'この実行ファイルはPHPのバージョンは{cli}ですが、ウェブサーバーでのバージョンは{web}です。'
+            error: 'PHPの実行ファイルの有効性確認にエラーがあります。'
+        cloud:
+            platform: 'プラットフォームはcomposer.jsonに構成してはなりません。'
+            cache: 'キャッシュの属性をcomposer.jsonに構成してはなりません。'
+
+    task:
+        setup_packages:
+            title: 'Contaoアプリケーションをインストール中'
+        install_packages:
+            title: 'Composerの依存関係をインストール中'
+        update_packages:
+            title: 'パッケージを更新'
+        dump_autoload:
+            title: 'Composerのクラスのオートローダーを書き出し中'
+        clear_cache:
+            title: 'Composerのキャッシュを消去中'
+        rebuild_cache:
+            title: 'Contaoのキャッシュを再作成'
+        self_update:
+            title: 'Contao Managerの自己更新'
+        backup_create:
+            title: 'データベースのバックアップを作成中'
+        backup_restore:
+            title: 'データベースのバックアップを復元中'
+
+    taskoperation:
+        self-update:
+            detail: '{old}から{new}に更新中'
+            success: '{new}に更新完了'
+        install-uploads:
+            summary: 'アップロードしたファイルをインストール中'
+            console: '{package} (バージョン {version})のインストール過程[packages/{name}に存在]'
+        remove-uploads:
+            summary: 'アップロードしたファイルを削除中'
+        composer-install:
+            retry: '再試行中 {current}/{max}'
+            nothing: 'インストールやアップデートはなし'
+            result: '{installs}個をインストール、{updates}個をアップデート、{removals}個を削除'
+        dump-autoload:
+            result: '{count}個のクラスを含む最適化した自動読み込みのファイルを生成'
+        cloud:
+            queued: 'キューに追加し約{seconds}秒で開始予定 (現在{workers}個のワーカーに{jobs}個のジョブ)'
+            processing: '{seconds}秒動作中'
+            error: '依存関係の解決に失敗'
+            finished: '{seconds}秒で完了。メモリの使用: {memory} (最大: {peak})、時間: {time}。'
+
+    upload:
+        error:
+            file: 'ファイルが無効、またはcomposer.jsonを含んでいません。'
+            json: 'composer.jsonが正しいJSONのデータを含んでいません。'
+            schema: 'composer.jsonスキーマの検証に失敗しました。'
+            partial: 'アップロードしたファイルは完全ではありませんでした。'
+
+    error:
+        writable:
+            root: 'Contao Managerは"{path}"のルートディレクトリに書き込みできませんでした。'
+            directory: 'Contao Managerは"{path}"のディレクトリを作成できませんでした。'
+            config-file: 'Contao Managerは構成ファイルを"{file}"に書き込めませんでした。'
+            detail: 'サーバーを正しく構成できていない様です。Contaoをインストールしようとしている場合は、WebサーバーのDocumentRootを設定してください。そうでない場合はファイルのアクセス権限が正しいことを確認してください。これを修正する方法がわからない場合は、ホスティング提供者に連絡してサポートを求めてください。'
